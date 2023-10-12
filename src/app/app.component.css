@@ -1,0 +1,35 @@
+.main {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.password-container {
+  margin-bottom: 20px;
+}
+
+.strength-indicator {
+  width: 250px;
+  height: 10px;
+  margin: 0 auto;
+  background-color: lightgray;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+}
+
+.strength-section {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}

@@ -1,0 +1,24 @@
+<div class="main">
+  <h3>Latin letters only</h3>
+  <div class="password-container">
+    <input
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Enter your password"
+    />
+  </div>
+  <div class="strength-indicator">
+    <div
+      class="strength-section"
+      [ngClass]="{
+        red: passwordStrengthService.getPasswordStrength(password) === 'red',
+        yellow:
+          passwordStrengthService.getPasswordStrength(password) === 'yellow',
+        green: passwordStrengthService.getPasswordStrength(password) === 'green'
+      }"
+      [style.width]="
+        passwordStrengthService.calculateStrengthPercentage(password) + '%'
+      "
+    ></div>
+  </div>
+</div>
